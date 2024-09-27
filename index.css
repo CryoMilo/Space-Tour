@@ -263,5 +263,47 @@ select {
 
 .dot-indicators > *{
     cursor: pointer;
-    
+    border: 0;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    padding: 0.5em;
+    background-color: hsl(var(--clr-white) / 0.25);
+}
+
+.dot-indicators > *:hover,
+.dot-indicators > *:focus{
+    background-color: hsl(var(--clr-white) / 0.5);
+}
+
+.dot-indicators > [aria-selected="true"] {
+    background-color: hsl( var(--clr-white) / 1);
+}
+
+.number-indicators {
+    display: flex;
+    flex-direction: column;
+    /* You can also add a gap between the buttons */
+    --gap: 1em;
+}
+
+.number-indicators > *{
+    position: relative;
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    width: 4em; /* Set a fixed width */
+    height: 4em; /* Set a fixed height */
+    background-color: hsl(var(--clr-white) / 0.25);
+    font-size: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-indicators > *:hover,
+.number-indicators > *:focus{
+    background-color: hsl(var(--clr-white) / 0.5);
+}
+
+.number-indicators > [aria-selected="true"] {
+    background-color: hsl( var(--clr-white) / 1);
 }
