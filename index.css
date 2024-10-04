@@ -456,11 +456,21 @@ select {
 	justify-content: space-evenly;
 }
 
+.destination {
+	background-size: cover;
+	background-position: bottom;
+	background-image: url(./assets/destination/background-destination-mobile.jpg);
+}
+
 @media (min-width: 35em) {
 	.destination-meta {
 		flex-direction: row;
 		justify-content: center;
 		gap: 3rem;
+	}
+
+	.destination {
+		background-image: url(./assets/destination/background-destination-tablet.jpg);
 	}
 }
 
@@ -482,6 +492,10 @@ select {
 	.grid-container--destination > img {
 		grid-area: image;
 		max-width: 80%;
+	}
+
+	.destination {
+		background-image: url(./assets/destination/background-destination-desktop.jpg);
 	}
 }
 
@@ -513,6 +527,18 @@ select {
 	grid-area: content;
 }
 
+.crew {
+	background-size: cover;
+	background-position: bottom;
+	background-image: url(./assets/crew/background-crew-mobile.jpg);
+}
+
+@media (min-width: 35em) {
+	.crew {
+		background-image: url(./assets/crew/background-crew-tablet.jpg);
+	}
+}
+
 @media (min-width: 45em) {
 	.grid-container--crew {
 		justify-items: start;
@@ -525,5 +551,9 @@ select {
 	.grid-container--crew > img {
 		max-width: 80%;
 		justify-self: right;
+	}
+
+	.crew {
+		background-image: url(./assets/crew/background-crew-desktop.jpg);
 	}
 }

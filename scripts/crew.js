@@ -1,22 +1,22 @@
 // Crew Data
 const crews = [
 	{
-		name: "Orion",
+		name: "Crew A",
 		description:
-			"The Orion crew is made up of seasoned astronauts who have ventured to the farthest reaches of space. Known for their resilience and unmatched teamwork, the Orion crew specializes in deep space missions to the Moon and beyond. They have a legacy of overcoming extreme challenges and setting new milestones in human space exploration.",
-		image: "./assets/crew/orion-group.png",
+			"The crew is made up of seasoned astronauts who have ventured to the farthest reaches of space. Known for their resilience and unmatched teamwork, the crew specializes in deep space missions to the Moon and beyond. They have a legacy of overcoming extreme challenges and setting new milestones in human space exploration.",
+		image: "./assets/crew/crew1.jpg",
 	},
 	{
-		name: "Nebula",
+		name: "Crew B",
 		description:
-			"The Nebula crew is at the forefront of scientific discovery, dedicated to exploring unknown celestial bodies. This crew consists of top scientists and engineers, working together to push the boundaries of space research. Their mission is to find new habitable planets and uncover the mysteries of the universe.",
-		image: "./assets/crew/nebula-group.png",
+			"The crew is at the forefront of scientific discovery, dedicated to exploring unknown celestial bodies. This crew consists of top scientists and engineers, working together to push the boundaries of space research. Their mission is to find new habitable planets and uncover the mysteries of the universe.",
+		image: "./assets/crew/crew2.jpg",
 	},
 	{
-		name: "Artemis",
+		name: "Crew C",
 		description:
-			"The Artemis crew is known for their cutting-edge space exploration techniques and unparalleled expertise in planetary geology. As pioneers in lunar and Martian exploration, the Artemis crew is tasked with building the first permanent human colonies beyond Earth, setting the stage for humanity’s next leap into the stars.",
-		image: "./assets/crew/artemis-group.png",
+			"Known for their cutting-edge space exploration techniques and unparalleled expertise in planetary geology. As pioneers in lunar and Martian exploration, the crew is tasked with building the first permanent human colonies beyond Earth, setting the stage for humanity’s next leap into the stars.",
+		image: "./assets/crew/crew3.jpg",
 	},
 ];
 
