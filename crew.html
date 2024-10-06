@@ -18,10 +18,21 @@
 
 <body class="crew">
 	<header class="primary-header flex">
-		<div><img src="./assets/shared/logo.svg" alt="logo"></div>
+		<div>
+			<img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
+		</div>
+		<button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only"
+				aria-expanded="false">Menu</span></button>
 		<nav>
-			<ul class="primary-navigation underline-indicators flex">
-				<li class="active"><a class="ff-sans-cond text-white letter-spacing-2" href="#"><span>01</span>Home</a></li>
+			<ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+				<li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span
+							aria-hidden="true">00</span>Home</a>
+				<li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span
+							aria-hidden="true">01</span>Destination</a>
+				<li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span
+							aria-hidden="true">02</span>Crew</a>
+				<li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="ship.html"><span
+							aria-hidden="true">03</span>Ship</a>
 			</ul>
 		</nav>
 	</header>
@@ -51,6 +62,7 @@
 	</main>
 
 	<script src="./scripts/crew.js"></script>
+	<script src="./index.js"></script>
 </body>
 
 </html>
