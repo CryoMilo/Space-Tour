@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+	<!-- Google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="index.css">
+	<title>Space Tour - Choose Your Ship</title>
+</head>
+
+<body class="destination">
+	<header class="primary-header flex">
+		<div><img src="./assets/shared/logo.svg" alt="logo"></div>
+		<nav>
+			<ul class="primary-navigation underline-indicators flex">
+				<li class="active"><a class="ff-sans-cond text-white letter-spacing-2" href="#"><span>01</span>Home</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="main" class="grid-container grid-container--ship flow">
+		<h1 class="numbered-title"><span>03</span>Choose Your Ship</h1>
+
+		<!-- Ship Image -->
+		<img id="ship-img" src="./assets/ship/Orion.png" alt="Orion" />
+
+		<!-- Tabs -->
+		<ul class="underline-indicators flex tab-list">
+			<li class="active uppercase ff-sans-cond text-accent bg-dark letter-spacing-2" data-ship="Orion">Orion</li>
+			<li class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2" data-ship="Nebula">Nebula</li>
+			<li class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2" data-ship="Artemis">Artemis</li>
+		</ul>
+
+		<!-- Ship Info -->
+		<article class="ship-info">
+			<h2 id="ship-name" class="fs-800 ff-serif text-white d-block uppercase">Orion</h2>
+			<p id="ship-description" class="text-accent">
+				The Orion is a state-of-the-art spacecraft designed for long-range exploration. Equipped with a quantum
+				propulsion system, it allows faster-than-light travel, making distant galaxies reachable within days.
+			</p>
+
+			<!-- Ship Specifications -->
+			<div class="ship-specs">
+				<div>
+					<p id="ship-engine-label">Engine:</p>
+					<p id="ship-engine">Quantum Pulse Engine</p>
+				</div>
+				<div>
+					<p id="ship-speed-label">Speed</p>
+					<p id="ship-speed">0.5 Light-years per hour</p>
+				</div>
+				<div>
+					<p id="ship-crew-capacity-label">Crew Capacity</p>
+					<p id="ship-crew-capacity">100 personnel</p>
+				</div>
+				<div>
+					<p class="ship-armament-label">Armament</p>
+					<p id="ship-armament">Photon Cannons</p>
+				</div>
+			</div>
+		</article>
+	</main>
+
+	<script src="./scripts/ship.js"></script>
+</body>
+
+</html>
