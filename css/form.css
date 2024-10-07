@@ -1,0 +1,31 @@
+.signup-form {
+	background-size: cover;
+	background-position: bottom;
+	background-image: url(../assets/ship/background-technology-mobile.jpg);
+}
+
+button {
+	cursor: pointer;
+}
+
+.form-container {
+	margin: 3rem auto;
+	justify-content: center;
+	text-align: center;
+}
+
+.form-container h1 {
+	text-align: center;
+}
+
+@media (min-width: 35em) {
+	.signup-form {
+		background-image: url(../assets/ship/background-technology-tablet.jpg);
+	}
+}
+
+@media (min-width: 45em) {
+	.signup-form {
+		background-image: url(../assets/ship/background-technology-desktop.jpg);
+	}
+}
