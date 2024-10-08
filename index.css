@@ -264,22 +264,22 @@ select {
 }
 
 .numbered-title {
-	font-family: var(--ff-sans-cond);
-	font-size: var(--fs-300);
+	font-family: var(--ff-sans-cond) !important;
+	font-size: var(--fs-300) !important;
 	text-transform: uppercase;
 	text-align: left;
-	letter-spacing: 4.72px;
+	letter-spacing: 4.72px !important;
 }
 
 @media (min-width: 35em) {
 	.numbered-title {
-		font-size: var(--fs-500);
+		font-size: var(--fs-500) !important;
 	}
 }
 
 .numbered-title span {
 	margin-right: 0.5em;
-	font-weight: 700;
+	font-weight: 700 !important;
 	color: hsl(var(--clr-white) / 0.25);
 }
 
