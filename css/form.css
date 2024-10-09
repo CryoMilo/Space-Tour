@@ -1,5 +1,5 @@
 body {
-	background-color: #dee9ff;
+	background-image: url(../assets/shared/form-background.jpg);
 }
 
 .registration-form {
@@ -64,4 +64,15 @@ body {
 
 .form-check-label {
 	color: black;
+}
+
+.cancel-btn {
+	border-radius: 30px;
+	padding: 10px 20px;
+	font-size: 18px;
+	font-weight: bold;
+	background-color: transparent;
+	border: none;
+	color: black;
+	margin-top: 20px;
 }

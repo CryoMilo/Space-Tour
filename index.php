@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: login.html");
+    exit();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,14 +33,14 @@
 
 <body>
 	<header class="primary-header flex">
-		<a href="./index.html">
+		<a href="./index.php">
 			<img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
 		</a>
 		<button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only"
 				aria-expanded="false">Menu</span></button>
 		<nav>
 			<ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
-				<li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span
+				<li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.php"><span
 							aria-hidden="true">00</span>Home</a>
 				<li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span
 							aria-hidden="true">01</span>Destination</a>
@@ -38,6 +48,8 @@
 							aria-hidden="true">02</span>Crew</a>
 				<li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="ship.html"><span
 							aria-hidden="true">03</span>Ship</a>
+				<li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="logout.php"><span
+							aria-hidden="true"></span>Logout</a>
 			</ul>
 		</nav>
 	</header>
