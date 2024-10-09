@@ -32,9 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	// Execute the statement and check for errors
 	if ($stmt->execute()) {
-			echo "New record created successfully";
+			echo "<p>New record created successfully</p>";
 	} else {
-			echo "Error: " . $stmt->error;
+			echo "<p>Error: " . $stmt->error . "</p>";
 	}
 
 	// Close the statement and connection
@@ -42,3 +42,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$conn->close();
 }
 ?>
+
+<!-- Add a button to go back to index.php -->
+<div style="margin-top: 20px;">
+    <a href="index.php" class="button">Go Back to Home</a>
+</div>
+
+<style>
+    /* Add some basic styling for the button */
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff; /* Bootstrap primary color */
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .button:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+    }
+</style>
