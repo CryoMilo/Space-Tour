@@ -508,6 +508,7 @@ select {
 /* ------------------- */
 
 .grid-container--destination {
+	place-content: center;
 	gap: 2rem;
 	grid-template-areas:
 		"title"
@@ -587,6 +588,7 @@ select {
 /* Crew */
 
 .grid-container--crew {
+	place-content: center;
 	gap: 2rem;
 	grid-template-areas:
 		"title"
@@ -648,6 +650,7 @@ select {
 /* ------------------- */
 
 .grid-container--ship {
+	place-content: center;
 	gap: 2rem;
 	grid-template-areas:
 		"title"
