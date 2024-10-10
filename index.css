@@ -432,6 +432,16 @@ select {
 	padding-bottom: 4rem;
 }
 
+.hero-text-container {
+	margin-bottom: 2rem;
+}
+
+@media (min-width: 35em) {
+	.hero-text-container {
+		margin-bottom: 0;
+	}
+}
+
 @media (min-width: 45rem) {
 	.grid-container--home > *:first-child {
 		grid-column: 2;
