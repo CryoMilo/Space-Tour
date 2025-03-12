@@ -10,13 +10,17 @@
 	<!-- Google fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+		rel="stylesheet">
 
 	<!-- My CSS -->
 	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="/css/button.css">
+	<link rel="stylesheet" href="/css/modal.css">
 
 	<title>Space Tour</title>
+
 </head>
 
 <body>
@@ -29,17 +33,22 @@
 		</button>
 		<nav>
 			<ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
-				<li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a></li>
-				<li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span>Destination</a></li>
-				<li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Crew</a></li>
-				<li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="ship.html"><span aria-hidden="true">03</span>Ship</a></li>
+				<li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span
+							aria-hidden="true">00</span>Home</a></li>
+				<li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span
+							aria-hidden="true">01</span>Destination</a></li>
+				<li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span
+							aria-hidden="true">02</span>Crew</a></li>
+				<li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="ship.html"><span
+							aria-hidden="true">03</span>Ship</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<section class="grid-container grid-container--home home">
 		<div style="display: flex; flex-direction: column; gap: 1rem;">
-			<h1 class="text-accent fs-500 ff-sans-cond uppercase">So, you want to travel to <span class="fs-900 ff-serif text-white d-block">Space</span></h1>
+			<h1 class="text-accent fs-500 ff-sans-cond uppercase">So, you want to travel to <span
+					class="fs-900 ff-serif text-white d-block">Space</span></h1>
 
 			<p class="text-accent">
 				Let’s face it; if you want to go to space, you might as well genuinely go to
@@ -49,7 +58,7 @@
 		</div>
 
 		<div>
-			<a href="./form.html" class="uppercase large-button ff-serif fs-600 text-dark bg-white">Explore</a>
+			<button id="explore-btn" class="uppercase large-button ff-serif fs-600 text-dark bg-white">Explore</button>
 		</div>
 
 		<video autoplay muted loop id="earthVideo">
@@ -58,7 +67,42 @@
 
 	</section>
 
-	<script src="./index.js"></script>
+	<!-- Video Modal -->
+	<div id="video-modal" class="modal">
+		<div class="modal-content">
+			<span class="close-btn" id="close-modal">&times;</span>
+			<iframe id="video-frame" src="" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const exploreBtn = document.getElementById("explore-btn");
+			const modal = document.getElementById("video-modal");
+			const closeModal = document.getElementById("close-modal");
+			const videoFrame = document.getElementById("video-frame");
+
+			const youtubeURL = "https://www.youtube.com/embed/uhJxYmJDS6k?autoplay=1&modestbranding=1&showinfo=0&rel=0&controls=0";
+
+			exploreBtn.addEventListener("click", function () {
+				videoFrame.src = youtubeURL;
+				modal.style.display = "flex";
+			});
+
+			closeModal.addEventListener("click", function () {
+				modal.style.display = "none";
+				videoFrame.src = ""; // Stop video when closing
+			});
+
+			// Close modal on outside click
+			modal.addEventListener("click", function (event) {
+				if (event.target === modal) {
+					modal.style.display = "none";
+					videoFrame.src = "";
+				}
+			});
+		});
+	</script>
 
 </body>
 

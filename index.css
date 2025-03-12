@@ -735,14 +735,6 @@ select {
 	}
 }
 
-/* FORM */
-.signup-form {
-	font-family: var(--ff-sans-cond);
-	background-size: cover;
-	background-position: bottom;
-	background-image: url(../assets/ship/background-technology-mobile.jpg);
-}
-
 button {
 	cursor: pointer;
 }
